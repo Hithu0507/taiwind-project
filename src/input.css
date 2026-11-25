@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+.about-card {
+    @apply bg-[#4b087c] text-white px-[15px] py-[35px] sm:py-[45px] text-center rounded-[10px];
+}
+.about-cards {
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-[15px] md:gap-[20px];
+}
+
+@layer components {
+
+    /* Skills Section */
+    .skills-section {
+        @apply bg-[#f8f6f8] px-[5%] py-[80px];
+    }
+
+    /* Section Title */
+    .section-title {
+        @apply text-center text-[28px] font-bold mb-[40px];
+    }
+
+    /* Skills Grid */
+    .skills-container {
+        @apply grid grid-cols-1 gap-[20px]
+               sm:grid-cols-2
+               md:grid-cols-3
+               lg:grid-cols-4;
+    }
+
+    /* Common Skill Card */
+    .skill-card {
+        @apply bg-white p-[25px_15px]
+               border border-[#eeeeee]
+               rounded-[6px];
+    }
+
+    /* Skill Icon */
+    .skill-icon {
+        @apply text-[#4b087c] text-[30px] font-bold mb-[15px];
+    }
+
+    /* Skill Name */
+    .skill-card h4 {
+        @apply text-[14px] font-bold mb-[5px];
+    }
+
+    /* Skill Description */
+    .skill-card p {
+        @apply text-[12px] leading-[1.5] mb-[10px];
+    }
+
+    /* Progress Background */
+    .progress {
+        @apply h-[6px] bg-[#dddddd] rounded-full;
+    }
+
+    /* Progress Bar */
+    .progress-bar {
+        @apply h-[6px] bg-[#4b087c] rounded-full;
+    }
+}
+
+
+
+/* Experence Section */
+.experience {
+    padding: 70px 20px;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #6254ff;
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline */
+.timeline {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+/* Middle Line */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background: #6254ff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline Cards */
+.timeline-item {
+    width: 50%;
+    position: relative;
+    padding: 0 60px 40px 0;
+}
+
+/* Right Card */
+.timeline-item.right {
+    left: 50%;
+    padding: 0 0 40px 60px;
+}
+
+/* Outer Circle */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border: 2px solid #6500a8;
+    border-radius: 50%;
+    top: 50px;
+    right: -9px;
+    z-index: 2;
+}
+
+/* Right Outer Circle */
+.timeline-item.right::after {
+    left: -9px;
+    right: auto;
+}
+
+/* Inner Purple Dot */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #6500a8;
+    border-radius: 50%;
+    top: 55px;
+    right: -4px;
+    z-index: 3;
+}
+
+/* Right Inner Dot */
+.timeline-item.right::before {
+    left: -4px;
+    right: auto;
+}
+
+/* Card Design */
+.content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px #ddd;
+}
+
+.content h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.content span,
+.content p {
+    font-size: 13px;
+    color: #444;
+}
+
+.content p {
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .timeline::after {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item.right {
+        width: 100%;
+        left: 0;
+        padding: 0 0 30px 40px;
+    }
+
+    .timeline-item::after,
+    .timeline-item.right::after {
+        left: 1px;
+        right: auto;
+    }
+
+    .timeline-item::before,
+    .timeline-item.right::before {
+        left: 6px;
+        right: auto;
+    }
+}
+
+/* Services Section */
+@layer components {
+
+    .services-section {
+        @apply bg-[#f8f6f8] px-[5%] py-[80px];
+    }
+
+    /* Services Grid */
+    .services-container {
+        @apply grid grid-cols-1 gap-[20px]
+               sm:grid-cols-2
+               lg:grid-cols-3
+               max-w-[1200px] mx-auto;
+    }
+
+    /* Common Service Card */
+    .service-card {
+        @apply bg-white p-[30px_20px]
+               text-center border border-[#eeeeee]
+               rounded-[8px] shadow-[0_2px_12px_rgba(0,0,0,0.08)]
+               w-full;
+    }
+
+    /* Service Icon */
+    .service-icon {
+        @apply text-[35px] text-black mb-[15px];
+    }
+
+    /* Service Heading */
+    .service-card h4 {
+        @apply text-[15px] font-bold mb-[10px];
+    }
+
+    /* Service Description */
+    .service-card p {
+        @apply text-[12px] text-[#666666] leading-[1.6];
+    }
+}
+
+@import "tailwindcss";
+
+@layer components {
+    .blog-card {
+        @apply bg-white border border-[#eeeeee]
+               rounded-[8px] overflow-hidden;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 5%;
+    background-color: #f8f6f8;
+}
+
+/* Contact Grid */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Form */
+.contact-form form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-size: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: white;
+    color: #4b087c;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Contact Details */
+.contact-details {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.contact-card h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-card p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Social Links */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: blue;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: #4b087c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+
+
+
+
